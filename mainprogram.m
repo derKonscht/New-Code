@@ -58,6 +58,10 @@ display_diag=1;    %=1 if you want to see diagnostics, ~1 if otherwise
 %********************************************************************
 %********************************************************************
 %3. initial guesses
+%%we can use other initial guesses e.g.
+sc0=[0.8 * ones (numsim, 1)];
+t0= [0.8* ones(numsim, 1)];
+%or just leave the old guesses. However mysimopttaxnew2 produces an error
 if mode == 1
     sc0=sce10rho01; % initial guess for the share of scientists in clean research
     t0=taue10rho01; % initial guess for the input tax
