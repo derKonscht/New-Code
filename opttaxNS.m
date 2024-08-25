@@ -20,7 +20,7 @@ tau = x(numsim+1:1:2*numsim);
 S(1) = S0; 
 A_c_N(1) = (1 + gamma * eta_c_N * s_c_N(1)) * Ac0;
 A_d_N(1) = (1 + gamma * eta_d_N * (1 - s_c_N(1))) * Ad0;
-A_c_S(1) = (kk* s_c_S(1) * A_c0) + ((1- kk)* (1-s_c_S(1))* Ac0;
+A_c_S(1) = (kk* s_c_S(1) * A_c0) + ((1- kk)* (1-s_c_S(1))* Ac0; %kappa
 A_d_S(1) = (kk* s_c_S(1) * A_c0) + ((1- kk)* (1-s_c_S(1))* Ad0;
 %kappa is already used in the mainprogram
 %Consumption comes from B.6 in AABH, now do it with the updated
