@@ -25,7 +25,8 @@ function U = mysimopttaxnew2NorthSouth(x, Ac0_north, Ad0_north, S0_north, Ac0_so
     A_c_south(1) = kappa * Ac_new + (1 - kappa) * Ac_old;
     A_d_south(1) = kappa * Ad_new + (1 - kappa) * Ad_old;
 
-    % Calculate consumption for both North and South
+    % Calculate consumption for both North and South. CONSUMPTION IS THE MEASUREMENT OF WELFARE
+    % WELFARE INCREASES OR DECREASES DEPEND ON THE CONSUMPTION
     C_north(1) = (alpha / psi)^(alpha / (1 - alpha)) * A_c_north(1) * A_d_north(1) / ((1 + tau_north(1))^(1 - epsilon) * A_c_north(1)^((1 - alpha) * (1 - epsilon)) + A_d_north(1)^((1 - alpha) * (1 - epsilon)))^(1 / ((1 - alpha) * (1 - epsilon))) * (1 - alpha + tau_north(1) * A_c_north(1)^((1 - alpha) * (1 - epsilon)) / (A_c_north(1)^((1 - alpha) * (1 - epsilon)) + (1 + tau_north(1))^epsilon * A_d_north(1)^((1 - alpha) * (1 - epsilon))));
     C_south(1) = (alpha / psi)^(alpha / (1 - alpha)) * A_c_south(1) * A_d_south(1) / ((1 + tau_south(1))^(1 - epsilon) * A_c_south(1)^((1 - alpha) * (1 - epsilon)) + A_d_south(1)^((1 - alpha) * (1 - epsilon)))^(1 / ((1 - alpha) * (1 - epsilon))) * (1 - alpha + tau_south(1) * A_c_south(1)^((1 - alpha) * (1 - epsilon)) / (A_c_south(1)^((1 - alpha) * (1 - epsilon)) + (1 + tau_south(1))^epsilon * A_d_south(1)^((1 - alpha) * (1 - epsilon))));
 
